@@ -1,0 +1,184 @@
+/* ------------------------------Fonts---------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* -------------------------------Common Styles --------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+
+header {
+  width: 100%;
+  background-color: #2d25a0;
+}
+
+footer {
+  text-align: center;
+}
+
+.container {
+  max-width: 1160px;
+  margin: auto;
+}
+
+/* -----------------------------------Header Section Styles---------------------------------------- */
+
+.top-section {
+  display: flex;
+  align-items: center;
+  padding: 86px 0px;
+}
+
+.topsec-text h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 80px;
+  padding-bottom: 27px;
+}
+
+.topsec-button {
+  display: block;
+  text-decoration: none;
+  padding: 10px 24px;
+  background-color: #e02c6d;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.fa-arrow-right {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.topsec-image {
+  padding-left: 102px;
+}
+
+.topsec-image img {
+  max-width: 100%;
+}
+
+header:hover .topsec-image img {
+  transform: translate(10px, 30px) scale(70%) rotate(360deg);
+  transition: transform 2s ease-in-out;
+  animation-name: movingbanner;
+  animation-duration: 10s;
+  animation-delay: 2.5s;
+  animation-iteration-count: 2;
+}
+
+@keyframes movingbanner {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(0.7) rotate(90deg);
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+  75% {
+    transform: scale(0.7) rotate(270deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+/* -------------------------- Players Section Styles ------------------------------- */
+
+.players-sec {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 27px 30px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.player {
+  padding: 15px;
+  box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.15);
+}
+
+.player img {
+  width: 100%;
+}
+
+.player-name {
+  font-size: 28px;
+  color: #18191f;
+  font-weight: 700;
+  line-height: 40px;
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.player-detail {
+  font-size: 16px;
+  line-height: 26px;
+  color: #6c6c6c;
+  text-align: justify;
+}
+
+/* ---------------------------------Footer Section Styles------------------------------- */
+
+.footer-logoimage img {
+  max-width: 100%;
+}
+
+.social-links a {
+  margin-right: 14px;
+}
+..social-links a img {
+  width: 100%;
+}
+
+.copyright-text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 63px;
+}
+/*-------------------------------------------------- Media Queries -----------------------------------*/
+
+/*------------------------------------------- FOR MOBILI DEVICES------------------------------------- */
+
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .top-section {
+    flex-direction: column;
+  }
+  .topsec-text h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .topsec-image {
+    padding-top: 50px;
+    padding-left: 0px;
+  }
+  .topsec-image img {
+    width: 100%;
+  }
+  .players-sec {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px 0px;
+  }
+  .player img {
+    width: 100%;
+  }
+}
