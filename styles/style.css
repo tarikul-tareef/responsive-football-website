@@ -28,6 +28,14 @@ footer {
   margin: auto;
 }
 
+.section-title {
+  font-size: 48px;
+  color: #173562;
+  font-weight: 700;
+  line-height: 1;
+  margin: 30px 0px;
+}
+
 /* -----------------------------------Header Section Styles---------------------------------------- */
 
 .top-section {
@@ -66,7 +74,7 @@ footer {
 }
 
 .topsec-image img {
-  max-width: 100%;
+  max-width: 556px;
 }
 
 header:hover .topsec-image img {
@@ -130,6 +138,43 @@ header:hover .topsec-image img {
   text-align: justify;
 }
 
+/* -------------------------------Team Section Styles---------------------------------- */
+
+.teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.team:hover {
+  box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.15);
+}
+.team img {
+  width: 100%;
+}
+/* -------------Video Section Styles--------- */
+.video-sec {
+  padding-bottom: 80px;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  box-shadow: ;
+}
+
+.video {
+  background-color: #3b3b3b;
+  box-shadow: 1px 1px 10px 10px rgb(192, 192, 192);
+}
+
+.video p {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+  line-height: 26px;
+}
 /* ---------------------------------Footer Section Styles------------------------------- */
 
 .footer-logoimage img {
@@ -139,9 +184,6 @@ header:hover .topsec-image img {
 .social-links a {
   margin-right: 14px;
 }
-..social-links a img {
-  width: 100%;
-}
 
 .copyright-text {
   font-size: 18px;
@@ -150,7 +192,7 @@ header:hover .topsec-image img {
   margin-top: 10px;
   margin-bottom: 63px;
 }
-/*-------------------------------------------------- Media Queries -----------------------------------*/
+/*====================== Media Queries ================================*/
 
 /*------------------------------------------- FOR MOBILI DEVICES------------------------------------- */
 
@@ -159,7 +201,6 @@ header:hover .topsec-image img {
     width: 90%;
     margin: auto;
   }
-
   .top-section {
     flex-direction: column;
   }
@@ -180,5 +221,53 @@ header:hover .topsec-image img {
   }
   .player img {
     width: 100%;
+  }
+  .teams {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .videos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .video p {
+    font-size: 16px;
+  }
+}
+
+/* -----------------For Tablet --------------*/
+
+@media only screen and (min-width: 689px) and (max-width: 1023px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .topsec-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+  }
+
+  .topsec-image {
+    padding-left: 10px;
+  }
+  .topsec-image img {
+    width: 100%;
+  }
+
+  .players-sec {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 0px;
+  }
+
+  .player img {
+    width: 100%;
+  }
+
+  .teams {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .videos {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
